@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Café</title>
+</head>
+
+<body>
+    <header class="header">
+        <section>
+            <a href="#" class="logo">
+                <img src="./img/logo.png" alt="logo">
+            </a>
+
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#about">Sobre</a>
+                <a href="#menu">Menu</a>
+                <a href="#review">Avaliações</a>
+                <a href="#address">Endereço</a>
+            </nav>
+
+            <div class="icons">
+                <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/search--v1.png"
+                    alt="search--v1" />
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/ffffff/shopping-cart--v1.png"
+                    alt="shopping-cart--v1" />
+                <img id="menu-btn" width="30" height="30" src="https://img.icons8.com/ios-filled/30/ffffff/menu--v6.png"
+                    alt="menu" />
+            </div>
+        </section>
+    </header>
+
+    <div class="home-container">
+        <section id="home">
+            <div class="content">
+                <h3>CODE COM O MELHOR CAFÉ DA REGIÃO</h3>
+                <p>Bem-vindo à nossa cafeteria, um refúgio exclusivo para o público da programação! Aqui, o melhor café da região, feito com grãos frescos e selecionados, 
+                    se une a um ambiente projetado para coders. Com espaço ideal para trabalhar, colaborar ou relaxar, 
+                    oferecemos a dose perfeita de cafeína e inspiração para turbinar seu código. 
+                    Venha experimentar e pegue o seu agora!</p>
+                <a href="#" class="btn">Pegue o seu agora</a>
+            </div>
+        </section>
+    </div>
+
+    <section class="about" id="about">
+        <h2 class="title">Sobre <span>Nós</span></h2>
+        <div class="row">
+            <div class="containter-image">
+                <img src="./img/about-img.jpg" alt="sobre-nos">
+            </div>
+
+            <div class="content">
+                <h3>O Que Faz Nosso Café Especial</h3>
+                <p>Nosso café é preparado com grãos selecionados da melhor qualidade, colhidos e torrados com cuidado para garantir um sabor rico e único. 
+                    Combinamos técnicas tradicionais com um toque de inovação, criando uma experiência que desperta os sentidos e inspira criatividade 
+                    – perfeito para programadores em busca de energia e conforto. Venha experimentar!</p>
+                <p>Nossos grãos são cuidadosamente selecionados das melhores regiões cafeeiras, garantindo alta qualidade e sabor excepcional. Cada grão é colhido no ponto ideal, 
+                    torrado de forma artesanal para preservar suas características únicas e embalado frescos, oferecendo uma experiência rica e inspiradora 
+                    – perfeita para os apaixonados por café e programação.</p>
+                <a href="#" class="btn">Saiba Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu" id="menu">
+        <h2 class="title">Nosso <span>Menu</span></h2>
+
+        <div class="box-container">
+            <div class="box">
+                <img src="./img/menu-1.png" alt="item-1">
+                <h3>Café Coado</h3>
+                <div class="price">R$ 15,99 <span>R$ 20,99</span></div>
+                <a href="#" class="btn add-to-cart" data-item="Café Coado" data-price="15.99">Adicione ao carrinho</a>
+            </div>
+
+
+            <div class="box">
+                <img src="./img/menu-2.png" alt="item-2" class="">
+                <h3>Expresso</h3>
+                <div class="price">R$ 12,50 <span>R$ 18,00</span></div>
+                <a href="#" class="btn add-to-cart" data-item="Expresso" data-price="12.50">Adicione ao carrinho</a>
+            </div>
+
+            <div class="box">
+                <img src="./img/menu-3.png" alt="item-3">
+                <h3>Capuccino</h3>
+                <div class="price">R$ 17,00 <span>R$ 22,00</span></div>
+                <a href="#" class="btn add-to-cart" data-item="Capuccino" data-price="17.00">Adicione ao carrinho</a>
+            </div>
+
+            <div class="box">
+                <img src="./img/menu-4.png" alt="item-4">
+                <h3>Latte</h3>
+                <div class="price">R$ 16,00 <span>R$ 21,00</span></div>
+                <a href="#" class="btn add-to-cart" data-item="Latte" data-price="16.00">Adicione ao carrinho</a>
+            </div>
+
+            <div class="box">
+                <img src="./img/menu-5.png" alt="item-5">
+                <h3>Mocha</h3>
+                <div class="price">R$ 18,50 <span>R$ 23,00</span></div>
+                <a href="#" class="btn add-to-cart" data-item="Mocha" data-price="18.50">Adicione ao carrinho</a>
+            </div>
+
+            <div class="box">
+                <img src="./img/menu-6.png" alt="item-6">
+                <h3>Frapuccino</h3>
+                <div class="price">R$ 19,99 <span>R$ 25,00</span></div>
+                <a href="#" class="btn add-to-cart" data-item="Frapuccino" data-price="19.99">Adicione ao carrinho</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="review" id="review">
+        <h2>Nossos <span>Clientes</span></h2>
+
+        <div class="review-carousel-container">
+            <div class="review-carousel">
+                <div class="box review-item active-review">
+                    <img src="./img/quote-img.png" alt="comentario">
+                    <p>acabei de tomar um café expresso incrível na cafeteria! O sabor foi simplesmente perfeito – rico, encorpado e exatamente o que eu precisava para uma sessão de codificação. 
+                        O atendimento foi impecável. Recomendo a todos os devs que buscam energia e inspiração. 🍵💻</p>
+                    <img src="./img/pic-1.png" alt="foto-cliente" class="user">
+                    <h3>João da Silva</h3>
+                    <div class="stars">
+                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
+                            alt="star--v1" />
+                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
+                            alt="star--v1" />
+                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
+                            alt="star--v1" />
+                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
+                            alt="star--v1" />
+                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/30/ffffff/star-half-empty.png"
+                            alt="star-half-empty" />
+                    </div>
+                </div>
+
+                <div class="box review-item">
+                    <img src="./img/quote-img.png" alt="comentario">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Experiência incrível! O café é delicioso
+                        e o ambiente super acolhedor. Recomendo a todos que buscam um lugar para relaxar e aproveitar.
+                    </p>
+                    <img src="./img/pic-2.png" alt="foto-cliente" class="user">
+                    <h3>Analice</h3>
+                    <div class="stars">
+                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
+                            alt="star--v1" />
+                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
+                            alt="star--v1" />
+                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
+                            alt="star--v1" />
+                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
+                            alt="star--v1" />
+                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
+                            alt="star--v1" />
+                    </div>
+                </div>
+
+                <div class="box review-item">
+                    <img src="./img/quote-img.png" alt="comentario">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. O melhor café da cidade, sem dúvidas!
+                        Atendimento impecável e variedade de opções. Voltarei sempre que puder para desfrutar dessa
+                        qualidade.</p>
+                    <img src="./img/pic-3.png" alt="foto-cliente" class="user">
+                    <h3>Diogo Jota</h3>
+                    <div class="stars">
+                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
+                            alt="star--v1" />
+                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
+                            alt="star--v1" />
+                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
+                            alt="star--v1" />
+                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/30/ffffff/star--v1.png"
+                            alt="star--v1" />
+                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/30/ffffff/star-half-empty.png"
+                            alt="star-half-empty" />
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn prev-btn">❮</button> <button class="carousel-btn next-btn">❯</button> </div>
+        </section>
+
+    <section class="address" id="address">
+        <h2 class="title">Nosso <span>Endereço</span></h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.9734005822987!2d-46.65750038890733!3d-23.56942006232598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c869fb1e1f%3A0xc07a21f7b7e8c3f!2sRua%20Augusta%2C%202516%20-%20Cerqueira%20C%C3%A9sar%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001413-000!5e0!3m2!1spt-BR!2sbr!4v1709848777934!5m2!1spt-BR!2sbr"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section class="footer">
+        <div class="share">
+            <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png"
+                alt="instagram-new--v1" />
+            <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png"
+                alt="facebook-new" />
+            <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="linkedin" />
+            <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/ffffff/twitterx--v1.png"
+                alt="twitterx--v1" />
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

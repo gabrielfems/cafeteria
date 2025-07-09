@@ -1,0 +1,382 @@
+:root {
+    --main-color: #d3ad7f;
+    --black: #13131a;
+    --bg: #010103;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+section {
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-bottom: var(--border);
+    background-color: var(--bg);
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.navbar a {
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.icons img {
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.icons img:hover {
+    width: 40px;
+    height: 40px;
+}
+
+/* Esconde o ícone do menu hamburguer por padrão em telas grandes */
+#menu-btn {
+    display: none;
+}
+
+.btn {
+    background: var(--main-color);
+    color: #fff;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.btn:hover {
+    letter-spacing: 0.1rem;
+}
+
+.home-container {
+    background: url("./img/home-img.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.home-container section {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.content {
+    max-width: 60rem;
+}
+
+.content h3 {
+    color: #fff;
+    font-size: 6rem;
+}
+
+.content p {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+.title {
+    font-size: 4rem;
+    color: var(--main-color);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+}
+
+.title span {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    background-color: var(--black);
+    gap: 1.5rem;
+}
+
+.about .row .content {
+    padding: 2rem;
+}
+
+.about .row .content h3 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.about .row .content p {
+    font-size: 1.6rem;
+    color: #fff;
+    padding: 1.6rem 0;
+    line-height: 1.8;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.menu .box-container .box {
+    text-align: center;
+    border: var(--border);
+    padding: 5rem;
+    cursor: pointer;
+}
+
+.menu .box-container .box img {
+    height: 10rem;
+}
+
+.menu .box-container .box h3 {
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.menu .box-container .box .price {
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+
+.menu .box-container .box span {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+.menu .box-container .box:hover {
+    background-color: #fff;
+}
+
+.menu .box-container .box:hover>* {
+    color: var(--black)
+}
+
+/* Estilos para o Carrossel de Avaliações */
+.review-carousel-container {
+    position: relative; /* Para posicionar os botões */
+    max-width: 800px; /* Largura máxima do carrossel */
+    margin: 0 auto;
+    overflow: hidden; /* Esconde o que está fora da visualização */
+    padding: 2rem 0; /* Espaçamento interno */
+    min-height: 350px; /* Garante altura para o container, ajuste se necessário */
+}
+
+.review-carousel {
+    display: flex; /* Para os itens ficarem lado a lado (mas serão sobrepostos) */
+    position: relative; /* Para os itens absolutos dentro dele */
+    height: 100%; /* Ocupa a altura do container */
+}
+
+.review-item {
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+    text-align: center;
+    border: var(--border);
+    padding: 3rem 2rem;
+    opacity: 0; /* Esconde os itens por padrão */
+    position: absolute; /* Posiciona os itens no mesmo lugar */
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 0.5s ease-in-out; /* Transição para o fade */
+    z-index: 1; /* Garante que estejam por baixo por padrão */
+}
+
+.review-item.active-review {
+    opacity: 1; /* Mostra o item ativo */
+    position: relative; /* Coloca o item ativo no fluxo normal, ocupando espaço */
+    z-index: 2; /* Garante que esteja por cima */
+}
+
+.review .review-item p {
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 2rem 0;
+    line-height: 1.8;
+    font-weight: lighter;
+}
+
+.review .review-item h3 {
+    color: #fff;
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+.review .review-item .user {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 5px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-btn:hover {
+    opacity: 1;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+
+.address {
+    display: flex;
+    align-items: center;
+    flex-direction: column
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer .share {
+    padding: 1rem 0;
+}
+
+.footer .share img {
+    margin: 0.3rem;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+.footer .share img:hover {
+    background-color: var(--main-color);
+}
+
+/* --- Media Queries para Responsividade (manter) --- */
+@media (max-width: 768px) {
+    .header section {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--black);
+        border-top: var(--border);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Escondido por padrão */
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        transition: clip-path 0.3s ease-in-out;
+    }
+
+    .header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* Visível */
+    }
+
+    .header .navbar a {
+        display: block;
+        margin: 1.5rem;
+        padding: 1rem;
+        font-size: 2rem;
+    }
+
+    #menu-btn {
+        display: inline-block;
+        order: 1;
+        margin-left: 2rem;
+    }
+
+    .icons {
+        order: 2;
+    }
+
+    .home-container section {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .content h3 {
+        font-size: 4.5rem;
+    }
+
+    .content p {
+        font-size: 1.8rem;
+    }
+
+    .about .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about .row .containter-image img {
+        width: 100%;
+    }
+    
+    .carousel-btn {
+        padding: 0.8rem 1.2rem;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
